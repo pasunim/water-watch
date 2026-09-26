@@ -1,0 +1,6 @@
+import { fetchThaiWaterFlow } from "@/lib/sources/thaiwater";
+import { sourceRoute } from "@/lib/sourceRoute";
+
+export const dynamic = "force-dynamic";
+
+export const GET = sourceRoute("flow", 5 * 60_000, fetchThaiWaterFlow);
